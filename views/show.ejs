@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Playlists</title>
+</head>
+<body>
+
+<h2>Músicas<h2>
+    <table border="2">
+        <thead>
+            <tr>
+                <td>Nome da música </td>
+                <td>Artista </td>
+                <td>Ações </td>
+                
+            </tr>
+        </thead>
+        <tbody>
+        <% data.forEach(function(details) { %>
+            <tr>
+                <td><%= details.name %></td>
+                <td><%= details.surname %></td>
+            <td><a href="/edit/<%= details._id %>">Editar</a></td>
+            <td><a href="/delete/<%=details._id %>">Deletar</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+
+        <button><a href="/">Voltar</a></button>
+        <button><a href="/">Novo</a></button>
+</body>
+</html>
